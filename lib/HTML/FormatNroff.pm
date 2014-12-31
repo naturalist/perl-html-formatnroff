@@ -8,6 +8,8 @@ use parent 'HTML::Formatter';
 use HTML::Formatter;
 use HTML::FormatTableNroff;
 
+our $VERSION = 0.5;
+
 sub default_values {
     (
         name          => "",      # man page name
