@@ -53,12 +53,12 @@ In both the META and DIV uses, case is ignored.
 
 ## $format\_nroff->dt\_start();
 
-Start a definition term <DT>,
+Start a definition term `<DT>`,
 using a temporary indent and vertical space.
 
 ## $format\_nroff->dd\_start();
 
-Start a data definition, <DD>, using a temporary indent.
+Start a data definition, `<DD>`, using a temporary indent.
 
 ## $format\_nroff->configure($arg);
 
@@ -75,7 +75,7 @@ End HTML formatting.
 
 ## $format\_nroff->html\_start();
 
-Process <HTML> start tag. Create the man page header based
+Process `<HTML>` start tag. Create the man page header based
 on saved attributes, unless the attribute
 $format\_nroff->{'man\_header'} is not set. This generates the following header:
 
@@ -94,23 +94,23 @@ End the current font, returning to the previous one.
 
 ## $format\_nroff->i\_start();
 
-Process <I> tag.
+Process `<I>` tag.
 
 ## $format\_nroff->i\_end();
 
-Process </I> tag.
+Process `</I>` tag.
 
 ## $format\_nroff->b\_start();
 
-Process <B> tag.
+Process `<B>` tag.
 
 ## $format\_nroff->b\_end();
 
-Process </B> tag.
+Process `</B>` tag.
 
 ## $format\_nroff->table\_start($node);
 
-Process <TABLE>, start table processing. $node
+Process `<TABLE>`, start table processing. $node
 is the current html\_parser node.
 
 ```
@@ -119,47 +119,47 @@ Pass on the $format_nroff->{'page_width'} to FormatTableNroff
 
 ## $format\_nroff->tr\_start($node);
 
-Process <TR>, add table row.
+Process `<TR>`, add table row.
 
 ## $format\_nroff->tr\_end();
 
-End the table row </TR>
+End the table row `</TR>`
 
 ## $format\_nroff->a\_start();
 
-<A> is ignored.
+`<A>` is ignored.
 
 ## $format\_nroff->a\_end();
 
-</A> is ignored.
+`</A>` is ignored.
 
 ## $format\_nroff->td\_start($node);
 
-Process <TD>, add table cell
+Process `<TD>`, add table cell
 
 ## $format\_nroff->td\_end();
 
-Process </TD>, end table cell
+Process `</TD>`, end table cell
 
 ## $format\_nroff->th\_start($node);
 
-Process <TH>, add table header cell
+Process `<TH>`, add table header cell
 
 ## $format\_nroff->th\_end();
 
-Process </TH>, end table header cell
+Process `</TH>`, end table header cell
 
 ## $format\_nroff->table\_end();
 
-Process </TABLE>. Actually output entire table.
+Process `</TABLE>`. Actually output entire table.
 
 ## $format\_nroff->p\_start();
 
-Process <P>.
+Process `<P>`.
 
 ## $format\_nroff->p\_end();
 
-Process </P> by doing nothing.
+Process `</P>` by doing nothing.
 
 ## $format\_nroff->goto\_lm()
 
@@ -167,19 +167,19 @@ goto\_lm does nothing.
 
 ## $format\_nroff->br\_start();
 
-Process <BR>.
+Process `<BR>`.
 
 ## $format\_nroff->hr\_start();
 
-Process <HR>
+Process `<HR>`
 
 ## $format\_nroff->header\_start();
 
-Process <H?> simply using .SH
+Process `<H?>` simply using .SH
 
 ## $format\_nroff->header\_end();
 
-Process </H?> simply outputing newline
+Process `</H?>` simply outputing newline
 
 ## $format\_nroff->out($text);
 
@@ -187,7 +187,7 @@ Output text.
 
 ## $format\_nroff->pre\_out($pre);
 
-Output <PRE> text.
+Output `<PRE>` text.
 
 ## $format\_nroff->nl($cnt);
 
@@ -213,11 +213,11 @@ if the left margin is adjusted use a .ti for every new line.
 
 ## $format\_nroff->blockquote\_start($node);
 
-Start <BLOCKQUOTE>, by making a new paragraph, and indenting.
+Start `<BLOCKQUOTE>`, by making a new paragraph, and indenting.
 
 ## $format\_nroff->blockquote\_end($node);
 
-</BLOCKQUOTE>, by ending indent, and making a new paragraph
+`</BLOCKQUOTE>`, by ending indent, and making a new paragraph
 
 ## $format\_nroff->div\_start($node);
 
@@ -242,7 +242,7 @@ In the header you probably should use
 
 ## $format\_nroff->meta\_start($node);
 
-Process <META> tag.
+Process `<META>` tag.
 
 ```perl
 <META NAME="nroff-control" CONTENT="ignore_start">

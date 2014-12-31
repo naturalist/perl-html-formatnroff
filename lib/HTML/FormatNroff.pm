@@ -502,171 +502,171 @@ In both the META and DIV uses, case is ignored.
 
 =head1 METHODS
 
-=head2 $format_nroff->dt_start();
+=head2 $format_nroff-E<gt>dt_start();
 
-Start a definition term <DT>,
+Start a definition term C<E<lt>DTE<gt>>,
 using a temporary indent and vertical space.
 
-=head2 $format_nroff->dd_start();
+=head2 $format_nroff-E<gt>dd_start();
 
-Start a data definition, <DD>, using a temporary indent.
+Start a data definition, C<E<lt>DDE<gt>>, using a temporary indent.
 
-=head2 $format_nroff->configure($arg);
+=head2 $format_nroff-E<gt>configure($arg);
 
 Configure the nroff formatter, setting the attributes passed in the
 $arg attribute (hash reference)
 
-=head2 $format_nroff->begin();
+=head2 $format_nroff-E<gt>begin();
 
 Begin HTML formatting.
 
-=head2 $format_nroff->end();
+=head2 $format_nroff-E<gt>end();
 
 End HTML formatting.
 
-=head2 $format_nroff->html_start();
+=head2 $format_nroff-E<gt>html_start();
 
-Process <HTML> start tag. Create the man page header based
+Process C<E<lt>HTMLE<gt>> start tag. Create the man page header based
 on saved attributes, unless the attribute
-$format_nroff->{'man_header'} is not set. This generates the following header:
+$format_nroff-E<gt>{'man_header'} is not set. This generates the following header:
 
     .TH "name" section "date" "project"
 
-=head2 $format_nroff->font_start($font);
+=head2 $format_nroff-E<gt>font_start($font);
 
 Start the font specified by the $font character (e.g. B, or I).
 The font is remembered so nested fonts are handled correctly.
 
-=head2 $format_nroff->font_end();
+=head2 $format_nroff-E<gt>font_end();
 
 End the current font, returning to the previous one.
 
-=head2 $format_nroff->i_start();
+=head2 $format_nroff-E<gt>i_start();
 
-Process <I> tag.
+Process C<E<lt>IE<gt>> tag.
 
-=head2 $format_nroff->i_end();
+=head2 $format_nroff-E<gt>i_end();
 
-Process </I> tag.
+Process C<E<lt>/IE<gt>> tag.
 
-=head2 $format_nroff->b_start();
+=head2 $format_nroff-E<gt>b_start();
 
-Process <B> tag.
+Process C<E<lt>BE<gt>> tag.
 
-=head2 $format_nroff->b_end();
+=head2 $format_nroff-E<gt>b_end();
 
-Process </B> tag.
+Process C<E<lt>/BE<gt>> tag.
 
-=head2 $format_nroff->table_start($node);
+=head2 $format_nroff-E<gt>table_start($node);
 
-Process <TABLE>, start table processing. $node
+Process C<E<lt>TABLEE<gt>>, start table processing. $node
 is the current html_parser node.
 
     Pass on the $format_nroff->{'page_width'} to FormatTableNroff
 
-=head2 $format_nroff->tr_start($node);
+=head2 $format_nroff-E<gt>tr_start($node);
 
-Process <TR>, add table row.
+Process C<E<lt>TRE<gt>>, add table row.
 
-=head2 $format_nroff->tr_end();
+=head2 $format_nroff-E<gt>tr_end();
 
-End the table row </TR>
+End the table row C<E<lt>/TRE<gt>>
 
-=head2 $format_nroff->a_start();
+=head2 $format_nroff-E<gt>a_start();
 
-<A> is ignored.
+C<E<lt>AE<gt>> is ignored.
 
-=head2 $format_nroff->a_end();
+=head2 $format_nroff-E<gt>a_end();
 
-</A> is ignored.
+C<E<lt>/AE<gt>> is ignored.
 
-=head2 $format_nroff->td_start($node);
+=head2 $format_nroff-E<gt>td_start($node);
 
-Process <TD>, add table cell
+Process C<E<lt>TDE<gt>>, add table cell
 
-=head2 $format_nroff->td_end();
+=head2 $format_nroff-E<gt>td_end();
 
-Process </TD>, end table cell
+Process C<E<lt>/TDE<gt>>, end table cell
 
-=head2 $format_nroff->th_start($node);
+=head2 $format_nroff-E<gt>th_start($node);
 
-Process <TH>, add table header cell
+Process C<E<lt>THE<gt>>, add table header cell
 
-=head2 $format_nroff->th_end();
+=head2 $format_nroff-E<gt>th_end();
 
-Process </TH>, end table header cell
+Process C<E<lt>/THE<gt>>, end table header cell
 
-=head2 $format_nroff->table_end();
+=head2 $format_nroff-E<gt>table_end();
 
-Process </TABLE>. Actually output entire table.
+Process C<E<lt>/TABLEE<gt>>. Actually output entire table.
 
-=head2 $format_nroff->p_start();
+=head2 $format_nroff-E<gt>p_start();
 
-Process <P>.
+Process C<E<lt>PE<gt>>.
 
-=head2 $format_nroff->p_end();
+=head2 $format_nroff-E<gt>p_end();
 
-Process </P> by doing nothing.
+Process C<E<lt>/PE<gt>> by doing nothing.
 
-=head2 $format_nroff->goto_lm()
+=head2 $format_nroff-E<gt>goto_lm()
 
 goto_lm does nothing.
 
-=head2 $format_nroff->br_start();
+=head2 $format_nroff-E<gt>br_start();
 
-Process <BR>.
+Process C<E<lt>BRE<gt>>.
 
-=head2 $format_nroff->hr_start();
+=head2 $format_nroff-E<gt>hr_start();
 
-Process <HR>
+Process C<E<lt>HRE<gt>>
 
-=head2 $format_nroff->header_start();
+=head2 $format_nroff-E<gt>header_start();
 
-Process <H?> simply using .SH
+Process C<E<lt>H?E<gt>> simply using .SH
 
-=head2 $format_nroff->header_end();
+=head2 $format_nroff-E<gt>header_end();
 
-Process </H?> simply outputing newline
+Process C<E<lt>/H?E<gt>> simply outputing newline
 
-=head2 $format_nroff->out($text);
+=head2 $format_nroff-E<gt>out($text);
 
 Output text.
 
-=head2 $format_nroff->pre_out($pre);
+=head2 $format_nroff-E<gt>pre_out($pre);
 
-Output <PRE> text.
+Output C<E<lt>PREE<gt>> text.
 
-=head2 $format_nroff->nl($cnt);
+=head2 $format_nroff-E<gt>nl($cnt);
 
 Output newline.
 
-=head2 $format_nroff->adjust_lm($indent);
+=head2 $format_nroff-E<gt>adjust_lm($indent);
 
 adjust indent (left margin)
 
-=head2 $format_nroff->adjust_rm();
+=head2 $format_nroff-E<gt>adjust_rm();
 
 not used.
 
-=head2 $format_nroff->bullet($tag);
+=head2 $format_nroff-E<gt>bullet($tag);
 
 output the bullet, using a temporary indent and the $tag
 
-=head2 $format_nroff->textflow($node);
+=head2 $format_nroff-E<gt>textflow($node);
 
 Output text or add it to table if currently inside a table
 If centered add .ce unless inside a table, if underlined add .ul,
 if the left margin is adjusted use a .ti for every new line.
 
-=head2 $format_nroff->blockquote_start($node);
+=head2 $format_nroff-E<gt>blockquote_start($node);
 
-Start <BLOCKQUOTE>, by making a new paragraph, and indenting.
+Start C<E<lt>BLOCKQUOTEE<gt>>, by making a new paragraph, and indenting.
 
-=head2 $format_nroff->blockquote_end($node);
+=head2 $format_nroff-E<gt>blockquote_end($node);
 
-</BLOCKQUOTE>, by ending indent, and making a new paragraph
+C<E<lt>/BLOCKQUOTEE<gt>>, by ending indent, and making a new paragraph
 
-=head2 $format_nroff->div_start($node);
+=head2 $format_nroff-E<gt>div_start($node);
 
 Process DIV
 
@@ -683,9 +683,9 @@ In the header you probably should use
         is used to ignore all subsequent content until the next
     <META NAME="nroff-control" CONTENT="ignore_end">
 
-=head2 $format_nroff->meta_start($node);
+=head2 $format_nroff-E<gt>meta_start($node);
 
-Process <META> tag.
+Process C<E<lt>METAE<gt>> tag.
 
     <META NAME="nroff-control" CONTENT="ignore_start">
         is used to ignore all subsequent content until the next
