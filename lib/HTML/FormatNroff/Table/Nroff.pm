@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use parent 'HTML::FormatNroff::Table';
 
-use HTML::FormatNroff::Table::RowNroff;
+use HTML::FormatNroff::Table::Row::Nroff;
 use Carp;
 
 sub rnd {
@@ -150,7 +150,7 @@ sub add_row {
     if ( defined( $self->{"current_row"} ) ) {
         push( @{ $self->{'previous_rows'} }, $self->{"current_row"} );
     }
-    $self->{"current_row"} = new HTML::FormatTableRowNroff(%attr);
+    $self->{"current_row"} = HTML::FormatNroff::Table::Row::Nroff->new(%attr);
 }
 
 sub row_iterator {

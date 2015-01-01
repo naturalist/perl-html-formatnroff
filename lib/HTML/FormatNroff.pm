@@ -164,7 +164,7 @@ sub table_start {
         }
     }
 
-    $self->{'current_table'} = new HTML::FormatTableNroff( $self, %attr );
+    $self->{'current_table'} = HTML::FormatNroff::Table::Nroff->new( $self, %attr );
 }
 
 sub tr_start {
