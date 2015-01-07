@@ -7,7 +7,7 @@ use parent 'HTML::Formatter';
 
 use HTML::FormatNroff::Table::Nroff;
 
-our $VERSION = 0.5;
+our $VERSION = 0.6;
 
 sub default_values {
     (
